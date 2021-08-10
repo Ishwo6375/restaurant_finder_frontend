@@ -7,7 +7,7 @@ function AddRestaurant() {
     name: "",
     image: "",
    location: "",
-    type: "",
+    restaurant_type: "",
     contact: ""
   });
 
@@ -27,7 +27,7 @@ function AddRestaurant() {
         name: formData.name,
         image: formData.image,
         location: formData.location,
-        type: formData.restaurant_type,
+        restaurant_type: formData.restaurant_type,
         contact: formData.contact
       }),
     };
@@ -86,7 +86,7 @@ function AddRestaurant() {
                 className="my-2"
                 type="text"
                 placeholder="Enter Restaurant Type.."
-                name="type"
+                name="restaurant_type"
                 value={formData.restaurant_type}
                 onChange={onHandleChange} /> 
             </div>

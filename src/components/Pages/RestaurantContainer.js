@@ -18,6 +18,7 @@ function RestaurantContainer() {
       <div>
           <h3>Restaurant Finder.com</h3>
           <h5>One shop stop to find you desired restaurant...</h5>
+        <div className="header">
         <input
           type="text"
           placeholder="Hungry?? Search Restaurant... "
@@ -26,22 +27,20 @@ function RestaurantContainer() {
             setSearchTerm(e.target.value);
           }}
         />
-        <div className="header">
 
-          {restaurants.filter((value) => {
-              if (searchTerm === "") {
+         {restaurants.filter(value =>{
+              if (searchTerm === '') {
                 return value;
-              } else if (
+              }else if(
                 value.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                value.restaurant_type
-                  .toLowerCase()
-                  .includes(searchTerm.toLowerCase()) ||
-                value.location.toLowerCase().includes(searchTerm.toLowerCase())
-              ) {
-                return value;
+                value.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                value.restaurant_type.toLowerCase().includes(searchTerm.toLowerCase())
+                
+              )
+              {
+                return value
               }
-            })
-            .map((restaurant, idx) => (
+            }).map((restaurant, idx) => (
               <div key={idx} className="restaurant-container">
               <div >
                 <div className="card card-body">
