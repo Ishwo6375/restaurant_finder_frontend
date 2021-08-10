@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BASE_URL } from "../constraints/index";
 
 function AddRestaurant() {
@@ -7,7 +7,7 @@ function AddRestaurant() {
     name: "",
     image: "",
    location: "",
-    restaurant_type: "",
+   restaurant_type: "",
     contact: ""
   });
 
