@@ -1,14 +1,29 @@
 import './App.css';
 import RestaurantContainer from './components/Pages/RestaurantContainer';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import AddRestaurant from './components/RestaurantForm/AddRestaurant';
+import NavBar from './components/NavBar/NavBar';
+import Home from './components/Pages/Home';
 
 function App() {
   return (
-    <div>
+    <Router>
+    <div className = "App">
+      <NavBar />
+      <Switch>
+        <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/restaurants">
       <RestaurantContainer />
+      </Route>
+      <Route exact path="/add">
       <AddRestaurant />
+      </Route>
+      </Switch>
     </div>
+    </Router>
   );
 }
 

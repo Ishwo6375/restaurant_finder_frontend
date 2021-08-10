@@ -47,7 +47,7 @@ function AddRestaurant() {
         <div className="w-75 mx-auto shadow p-5">
           <h2 className="add-hire">Add New Restaurant</h2>
 
-          <form onSubmit={onSubmitAddUser}>
+          <form >
             <div>
               <input
                 className="my-2"
@@ -102,7 +102,7 @@ function AddRestaurant() {
             </div>
 
 
-            <button className="my-2 btn-primary">New Restaurant</button>
+            <button onClick={onSubmitAddUser} className="my-2 btn-primary">New Restaurant</button>
           </form>
         </div>
       </div>

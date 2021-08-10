@@ -16,8 +16,6 @@ function RestaurantContainer() {
   return (
     <>
       <div>
-          <h3>Restaurant Finder.com</h3>
-          <h5>One shop stop to find you desired restaurant...</h5>
         <div className="header">
           <label>Search</label>
         <input
@@ -39,8 +37,7 @@ function RestaurantContainer() {
               {
                 
                 return value
-              }
-}).map((restaurant, idx) => (
+              }}).map((restaurant, idx) => (
               <div key={idx} className="restaurant-container">
               <div >
                 <div className="card card-body">
