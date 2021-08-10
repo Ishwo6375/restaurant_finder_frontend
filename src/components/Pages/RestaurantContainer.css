@@ -1,34 +1,31 @@
-html, body {
-  box-sizing: 'border-box';
-  margin: 0;
-  padding: 0;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
+
+body{
+    background: rgb(148, 174, 246);
+}
+
+img{
+    max-width: 20rem;
+    padding: 20px;
+}
+
 .restaurant-container{
-   background: #e7ded3;
-   width: 500px;
-   margin-left: 300px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 5rem;
+     
 }
 
-.restaurant-container img{
-    height: 200px;
-    width: 300px;
-    border-radius: 2rem;
-}
-
-.type{
-    text-align: center;
-}
-.location{
-    text-align: center;
-}
-.title{
-    text-align: center;
-}
-.image{
-    text-align:center;
-}
-
-.contact{
-    text-align: center;
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+    align-items: center;
+    /* flex-direction: row; */
+    justify-content: center;
 }
 
