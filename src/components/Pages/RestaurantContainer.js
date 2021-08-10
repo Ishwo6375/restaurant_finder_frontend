@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { BASE_URL } from "../constraints/index";
 import { Link } from "react-router-dom";
 import "./RestaurantContainer.css";
 
@@ -9,7 +8,7 @@ function RestaurantContainer() {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    fetch(BASE_URL + 'restaurants')
+    fetch('http://127.0.0.1:9393/restaurants')
       .then((res) => res.json())
       .then((Data) => setRestaurants(Data));
   }, []);

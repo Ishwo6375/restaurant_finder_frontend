@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BASE_URL } from "../constraints/index";
+
 
 function AddRestaurant() {
      //setting initial value as empty string to hold form data//
@@ -32,7 +32,7 @@ function AddRestaurant() {
       }),
     };
 
-     fetch(BASE_URL + "restaurants", config)
+    fetch('http://127.0.0.1:9393/restaurants', config)
      .then((res) => res.json())
       .then((newRestaurant) => {
         const newRestaurants = [formData, newRestaurant];
