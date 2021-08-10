@@ -19,6 +19,7 @@ function RestaurantContainer() {
           <h3>Restaurant Finder.com</h3>
           <h5>One shop stop to find you desired restaurant...</h5>
         <div className="header">
+          <label>Search</label>
         <input
           type="text"
           placeholder="Hungry?? Search Restaurant... "
@@ -34,13 +35,12 @@ function RestaurantContainer() {
               }else if(
                 value.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 value.location.toLowerCase().includes(searchTerm.toLowerCase()) 
-                // value.restaurant_type.toLowerCase().includes(searchTerm.toLowerCase())
               )
               {
                 
                 return value
               }
-            }).map((restaurant, idx) => (
+}).map((restaurant, idx) => (
               <div key={idx} className="restaurant-container">
               <div >
                 <div className="card card-body">
@@ -48,6 +48,7 @@ function RestaurantContainer() {
                   <div className="card-body">
                     <h2>{restaurant.name}</h2>
                     <p>{restaurant.restaurant_type}</p>
+                    <p>{restaurant.location}</p>
                    <p>Contact: {restaurant.contact}</p>
                    <button className="btn btn-primary">Show Restaurant</button>
                   </div>
