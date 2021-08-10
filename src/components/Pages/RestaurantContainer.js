@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BASE_URL } from "../constraints/index";
+import { Link } from "react-router-dom";
 import "./RestaurantContainer.css";
 
 function RestaurantContainer() {
@@ -8,7 +9,7 @@ function RestaurantContainer() {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    fetch(BASE_URL + "restaurants")
+    fetch(BASE_URL + 'restaurants')
       .then((res) => res.json())
       .then((Data) => setRestaurants(Data));
   }, []);
@@ -26,7 +27,7 @@ function RestaurantContainer() {
             setSearchTerm(e.target.value);
           }}
         />
-      
+     
          {restaurants.filter(value =>{
               if (searchTerm === '') {
                 return value;
@@ -35,9 +36,9 @@ function RestaurantContainer() {
                 value.location.toLowerCase().includes(searchTerm.toLowerCase()) 
               )
               {
-                
                 return value
-              }}).map((restaurant, idx) => (
+                }
+                }).map((restaurant, idx) => (
               <div key={idx} className="restaurant-container">
               <div >
                 <div className="card card-body">
@@ -47,7 +48,7 @@ function RestaurantContainer() {
                     <p>{restaurant.restaurant_type}</p>
                     <p>{restaurant.location}</p>
                    <p>Contact: {restaurant.contact}</p>
-                   <button className="btn btn-primary">Show Restaurant</button>
+                   <Link className="btn btn-primary" to={`/restaurants/RestaurantProfile/${restaurant.id}`}>Show Restaurant</Link>
                   </div>
                 </div>
               </div>

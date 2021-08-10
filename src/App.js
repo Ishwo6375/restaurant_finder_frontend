@@ -5,6 +5,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import AddRestaurant from './components/RestaurantForm/AddRestaurant';
 import NavBar from './components/NavBar/NavBar';
 import Home from './components/Pages/Home';
+import RestaurantProfile from './components/Pages/RestaurantProfile';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route exact path="/restaurants">
       <RestaurantContainer />
+      </Route>
+      <Route exact path="/restaurants/RestaurantProfile/:id">
+         <RestaurantProfile />
       </Route>
       <Route exact path="/add">
       <AddRestaurant />
