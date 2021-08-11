@@ -7,6 +7,7 @@ import NavBar from './components/NavBar/NavBar';
 import Home from './components/Pages/Home';
 import RestaurantProfile from './components/Pages/RestaurantProfile';
 
+
 function App() {
   return (
     <Router>

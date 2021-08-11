@@ -1,0 +1,12 @@
+.res-profile-img{
+    height: 400px;
+    width: 100%;
+}
+
+.res-profile{
+    background: rgb(232, 228, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
