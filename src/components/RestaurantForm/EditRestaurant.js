@@ -7,7 +7,6 @@ function EditRestaurant(){
 
 //seeting useState to hold data from form//
   //setting initial value to empty string//
-  const[editMode, setEditMode] = useState(false)
   const [editRestaurant, setEditRestaurant] = useState({
     name: "",
     imaget: "",
@@ -47,7 +46,6 @@ function EditRestaurant(){
       .then((res) => res.json())
       .then((newRestaurant) => {
         setEditRestaurant(newRestaurant);
-        setEditMode(true)
       });
   }
 

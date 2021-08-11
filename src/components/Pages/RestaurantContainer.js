@@ -30,17 +30,19 @@ function RestaurantContainer() {
 
   return (
     <>
-      <div>
-        <div className="header">
           <label>Search</label>
+          <div  className="Input-wrapper">
         <input
           type="text"
           placeholder="Hungry?? Search Restaurant... "
-          className="form-control search-input "
+          className="Input-wrapper"
           onChange={(e) => {
             setSearchTerm(e.target.value);
           }}
         />
+        </div>
+      <div>
+        <div className="header">
     
         
          {restaurants.filter(value =>{
@@ -58,8 +60,8 @@ function RestaurantContainer() {
               <div key={idx} className="restaurant-container">
               <div >
                 <div className="card card-body restu">
-                  <img src={restaurant.image} alt="restaurant-pic" />
                   <div className="card-body">
+                  <img src={restaurant.image} alt="restaurant-pic" />
                     <h2>{restaurant.name}</h2>
                     <p>{restaurant.restaurant_type}</p>
                     <p>{restaurant.location}</p>

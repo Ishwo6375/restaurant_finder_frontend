@@ -38,10 +38,19 @@ img{
   background-color: rgb(95, 196, 209);
   font-size: 15px;
   color: rgb(255, 255, 255);
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 15px 5px rgba(0, 0, 0, 0.5);
   transition: 0.5s all ease-in-out;
   
-  
+}
+
+.Input-wrapper input{
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    border: 0px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0.5);
 }
    
 

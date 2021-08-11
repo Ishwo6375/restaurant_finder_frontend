@@ -3,11 +3,14 @@
     width: 100%;
 }
 
-.res-profile{
-    background: rgb(232, 228, 236);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'PT Sans', sans-serif;
+.profile-card:hover{
+   background-color: rgb(95, 196, 209);
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 4px 15px 5px rgba(0, 0, 0, 0.5);
+  transition: 0.5s all ease-in-out;
+}
+
+.profile-card{
+    padding: 40px;
 }

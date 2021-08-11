@@ -7,6 +7,7 @@ import NavBar from './components/NavBar/NavBar';
 import Home from './components/Pages/Home';
 import RestaurantProfile from './components/Pages/RestaurantProfile';
 import EditRestaurant from './components/RestaurantForm/EditRestaurant';
+import FoodContainer from './components/Pages/FoodContainer';
 
 
 function App() {
@@ -30,7 +31,11 @@ function App() {
       <Route exact path="/restaurants/edit/:id">
         <EditRestaurant />
         </Route>
+        <Route exact path="/menus">
+       <FoodContainer />
+        </Route>
       </Switch>
+      
     </div>
     </Router>
   );

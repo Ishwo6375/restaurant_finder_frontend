@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import {useHistory} from 'react-router-dom'
+
 
 
 function AddRestaurant() {
-   let history = useHistory
+  
      //setting initial value as empty string to hold form data//
     const [formData, setformData] = useState({
     name: "",

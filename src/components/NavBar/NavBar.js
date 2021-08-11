@@ -14,6 +14,10 @@ function NavBar() {
           <NavLink className="nav-items" to="/add">
               New Restaurants
           </NavLink>
+          <NavLink className="nav-items" to="/menus">
+              All foods
+          </NavLink>
+         
       </nav>
     </div>
   );
