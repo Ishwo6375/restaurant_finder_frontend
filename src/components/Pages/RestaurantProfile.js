@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Restaurant.css";
 
 
@@ -18,21 +19,20 @@ function RestaurantProfile() {
    
 
   return (
-      <>
     <div>
       {restaurant && (
-       <div>
+      <>
+           <Link className="btn btn-primary mx-3" to={`/restaurants/edit/${restaurant.id}`}>Edit</Link>
           <h1>Restaurant Details</h1>
           <img className="res-profile-img" src={restaurant.image} alt="restaurant-pic"/>
           <h2>Restaurant Name: {restaurant.name}</h2>
           <h3>Restaurant Type:{restaurant.restaurant_type}</h3>
           <h5>{restaurant.location}</h5>
           <h5>Contact: {restaurant.contact}</h5>
-     </div>
+    </>
       )}
      
     </div>
-    </>
   );
 }
 

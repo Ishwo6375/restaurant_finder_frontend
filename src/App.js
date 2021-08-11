@@ -6,6 +6,7 @@ import AddRestaurant from './components/RestaurantForm/AddRestaurant';
 import NavBar from './components/NavBar/NavBar';
 import Home from './components/Pages/Home';
 import RestaurantProfile from './components/Pages/RestaurantProfile';
+import EditRestaurant from './components/RestaurantForm/EditRestaurant';
 
 
 function App() {
@@ -20,12 +21,15 @@ function App() {
           <Route exact path="/restaurants">
       <RestaurantContainer />
       </Route>
-      <Route exact path="/restaurants/RestaurantProfile/:id">
+      <Route exact path="/restaurants/:id">
          <RestaurantProfile />
       </Route>
       <Route exact path="/add">
       <AddRestaurant />
       </Route>
+      <Route exact path="/restaurants/edit/:id">
+        <EditRestaurant />
+        </Route>
       </Switch>
     </div>
     </Router>

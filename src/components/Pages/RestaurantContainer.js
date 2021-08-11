@@ -5,7 +5,6 @@ import "./RestaurantContainer.css";
 function RestaurantContainer() {
   //setting initial state to empty array//
   const [restaurants, setRestaurants] = useState([]);
-  const [restaurantDelete, setRestaurantDelete] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   //Implementing  GET method
@@ -21,16 +20,12 @@ function RestaurantContainer() {
   }
 
   // Implementing Delete//
-  function deleteRestaurant(restaurantId) {
-    fetch(`http://127.0.0.1:9393/restaurants/${restaurantId}`, {
+  function deleteRestaurant(restaurant) {
+    fetch(`http://127.0.0.1:9393/restaurants/${restaurant.id}`, {
       method: "DELETE",
-    }).then((res) => {
-      res.json().then(() => {
-        const newRestaurants = restaurants.filter((restaurant) => restaurant.id !== restaurantId);
-        setRestaurantDelete(newRestaurants);
-        showRestaurants();
-      });
-    });
+    })
+        const newRestaurants = restaurants.filter((res) => res.id !== restaurant.id);
+        setRestaurants(newRestaurants);
   }
 
   return (
@@ -67,9 +62,9 @@ function RestaurantContainer() {
                     <p>{restaurant.restaurant_type}</p>
                     <p>{restaurant.location}</p>
                    <p>Contact: {restaurant.contact}</p>
-                   <Link className="btn btn-primary" to={`/restaurants/RestaurantProfile/${restaurant.id}`}>Show Restaurant</Link>
+                   <Link className="btn btn-primary" to={`/restaurants/${restaurant.id}`}>Show Restaurant</Link>
                    <button
-                      onClick={() => deleteRestaurant(restaurant.id)}
+                      onClick={() => deleteRestaurant(restaurant)}
                       className="btn btn-danger mx-2"
                     >
                       Delete
