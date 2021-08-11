@@ -6,7 +6,7 @@ import "./Restaurant.css";
 
 function RestaurantProfile() {
   const [restaurant, setRestaurant] = useState([]);
-  
+
   const { id } = useParams();
 
   useEffect(() => {

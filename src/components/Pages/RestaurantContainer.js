@@ -5,13 +5,33 @@ import "./RestaurantContainer.css";
 function RestaurantContainer() {
   //setting initial state to empty array//
   const [restaurants, setRestaurants] = useState([]);
+  const [restaurantDelete, setRestaurantDelete] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
+  //Implementing  GET method
+
   useEffect(() => {
-    fetch('http://127.0.0.1:9393/restaurants')
+    showRestaurants();
+  }, []);
+
+  function showRestaurants(){
+     fetch('http://127.0.0.1:9393/restaurants')
       .then((res) => res.json())
       .then((Data) => setRestaurants(Data));
-  }, []);
+  }
+
+  // Implementing Delete//
+  function deleteRestaurant(restaurantId) {
+    fetch(`http://127.0.0.1:9393/restaurants/${restaurantId}`, {
+      method: "DELETE",
+    }).then((res) => {
+      res.json().then(() => {
+        const newRestaurants = restaurants.filter((restaurant) => restaurant.id !== restaurantId);
+        setRestaurantDelete(newRestaurants);
+        showRestaurants();
+      });
+    });
+  }
 
   return (
     <>
@@ -48,7 +68,14 @@ function RestaurantContainer() {
                     <p>{restaurant.location}</p>
                    <p>Contact: {restaurant.contact}</p>
                    <Link className="btn btn-primary" to={`/restaurants/RestaurantProfile/${restaurant.id}`}>Show Restaurant</Link>
+                   <button
+                      onClick={() => deleteRestaurant(restaurant.id)}
+                      className="btn btn-danger mx-2"
+                    >
+                      Delete
+                    </button>
                   </div>
+                  
                 </div>
               </div>
               </div>
