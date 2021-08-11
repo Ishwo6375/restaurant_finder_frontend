@@ -1,9 +1,10 @@
 import React from "react";
 import { NavLink} from "react-router-dom";
+import './NavBar.css'
 function NavBar() {
   return (
-    <div>
-      <nav className="nav-bar">
+    <div className="nav-bar">
+     <nav className="nav-items">
           <h2>Restaurant Finder.com</h2>
           <NavLink className="nav-items" to="/">
               Home
