@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import {useHistory} from 'react-router-dom'
 
 
 function AddRestaurant() {
+   let history = useHistory
      //setting initial value as empty string to hold form data//
     const [formData, setformData] = useState({
     name: "",
@@ -45,7 +47,7 @@ function AddRestaurant() {
         <div>
       <div className="div-container">
         <div className="w-75 mx-auto shadow p-5">
-          <h2 className="add-hire">Add New Restaurant</h2>
+          <h2 className="add">Add New Restaurant</h2>
 
           <form >
             <div>

@@ -14,6 +14,7 @@ function RestaurantProfile() {
     fetch(`http://127.0.0.1:9393/restaurants/${id}`)
       .then((res) => res.json())
       .then((resData) => setRestaurant(resData));
+      // eslint-disable-next-line
   }, []);
 
    

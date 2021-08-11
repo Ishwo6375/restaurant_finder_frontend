@@ -1,6 +1,5 @@
-import { getDefaultNormalizer } from "@testing-library/react";
+
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 function EditRestaurant(){
@@ -8,12 +7,13 @@ function EditRestaurant(){
 
 //seeting useState to hold data from form//
   //setting initial value to empty string//
+  const[editMode, setEditMode] = useState(false)
   const [editRestaurant, setEditRestaurant] = useState({
     name: "",
-    contact: "",
+    imaget: "",
     restaurant_type: "",
     location: "",
-    contact:""
+    contact: ""
   });
  //Array desturctiong//
   const {name, image, restaurant_type, location , contact} = editRestaurant;
@@ -47,6 +47,7 @@ function EditRestaurant(){
       .then((res) => res.json())
       .then((newRestaurant) => {
         setEditRestaurant(newRestaurant);
+        setEditMode(true)
       });
   }
 

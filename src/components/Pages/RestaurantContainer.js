@@ -41,7 +41,8 @@ function RestaurantContainer() {
             setSearchTerm(e.target.value);
           }}
         />
-     
+    
+        
          {restaurants.filter(value =>{
               if (searchTerm === '') {
                 return value;
@@ -56,7 +57,7 @@ function RestaurantContainer() {
                 }).map((restaurant, idx) => (
               <div key={idx} className="restaurant-container">
               <div >
-                <div className="card card-body">
+                <div className="card card-body restu">
                   <img src={restaurant.image} alt="restaurant-pic" />
                   <div className="card-body">
                     <h2>{restaurant.name}</h2>
