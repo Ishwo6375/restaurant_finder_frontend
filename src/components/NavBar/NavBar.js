@@ -12,11 +12,8 @@ function NavBar() {
           <NavLink className="nav-items" to="/restaurants">
               All Restaurants
           </NavLink>
-          <NavLink className="nav-items" to="/add">
-              New Restaurants
-          </NavLink>
           <NavLink className="nav-items" to="/menus">
-              All foods
+             Search By Foods
           </NavLink>
          
       </nav>

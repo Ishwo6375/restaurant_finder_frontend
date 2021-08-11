@@ -9,6 +9,7 @@ import RestaurantProfile from './components/Pages/RestaurantProfile';
 import EditRestaurant from './components/RestaurantForm/EditRestaurant';
 import FoodContainer from './components/Pages/FoodContainer';
 import Order from './components/Pages/Order';
+import AddFoodItems from './components/RestaurantForm/AddFoodItem';
 
 
 function App() {
@@ -38,6 +39,12 @@ function App() {
         <Route exact path="/Orders">
        <Order />
         </Route>
+
+          <Route exact path="/addfooditem">
+          <AddFoodItems />
+        </Route>
+
+        
       </Switch>
       
     </div>

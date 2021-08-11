@@ -35,6 +35,7 @@ function RestaurantProfile() {
           <h5>Contact: {restaurant.contact}</h5>
           <div>
              <Link className="btn btn-primary mx-3" to={`/restaurants/edit/${restaurant.id}`}>Edit Restaurant</Link>
+             <Link className="btn btn-secondary" to={"/addfooditem"}>Add Food Items!!</Link>
           </div>
           </div>
          

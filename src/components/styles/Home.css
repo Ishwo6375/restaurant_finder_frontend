@@ -1,0 +1,11 @@
+.main-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.homepage-items{
+ padding: 15rem;
+margin: 30px;
+}

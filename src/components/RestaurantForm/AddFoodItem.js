@@ -1,41 +1,37 @@
 import React, { useState } from "react";
 
-function AddRestaurant() {
+function AddFoodItems() {
   //setting initial value as empty string to hold form data//
-  const [formData, setformData] = useState({
-    name: "",
+  const [foodItems, setFoodItems] = useState({
+    food_name: "",
     image: "",
-    location: "",
-    restaurant_type: "",
-    contact: "",
+    description: "",
+    price: "",
+    restaurant_id: "",
   });
 
+  const { food_name, image, description, price, restaurant_id } = foodItems;
+
   function onHandleChange(e) {
-    setformData({ ...formData, [e.target.name]: e.target.value });
+    setFoodItems({ ...foodItems, [e.target.name]: e.target.value });
   }
 
   //Implementing POST method to add Employee
-  function onSubmitAddRestaurant(e) {
+  function onSubmitAddFoodItem(e) {
     e.preventDefault();
     const config = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        name: formData.name,
-        image: formData.image,
-        location: formData.location,
-        restaurant_type: formData.restaurant_type,
-        contact: formData.contact,
-      }),
+      body: JSON.stringify(foodItems ),
     };
 
-    fetch("http://127.0.0.1:9393/restaurants", config)
+    fetch("http://127.0.0.1:9393/menus", config)
       .then((res) => res.json())
-      .then((newRestaurant) => {
-        const newRestaurants = [formData, newRestaurant];
-        setformData(newRestaurants);
+      .then((newFoodItem) => {
+        const newFoodItems = [foodItems, newFoodItem];
+        setFoodItems(newFoodItems);
       });
   }
 
@@ -43,16 +39,16 @@ function AddRestaurant() {
     <div>
       <div className="div-container">
         <div className="w-75 mx-auto shadow p-5">
-          <h2 className="add">Add New Restaurant</h2>
+          <h2 className="add">Add New Food Item</h2>
 
           <form>
             <div>
               <input
                 className="my-2"
                 type="text"
-                placeholder="Enter Restaurant Name.."
-                name="name"
-                value={formData.name}
+                placeholder="Enter Food Name"
+                name="food_name"
+                value={food_name}
                 onChange={onHandleChange}
               />
             </div>
@@ -63,7 +59,7 @@ function AddRestaurant() {
                 type="text"
                 placeholder="Enter Image URL.."
                 name="image"
-                value={formData.image}
+                value={image}
                 onChange={onHandleChange}
               />
             </div>
@@ -71,10 +67,10 @@ function AddRestaurant() {
             <div>
               <input
                 className="my-2"
-                type="location"
-                placeholder="Enter location.."
-                name="location"
-                value={formData.location}
+                type="text"
+                placeholder="Enter Description"
+                name="description"
+                value={description}
                 onChange={onHandleChange}
               />
             </div>
@@ -84,8 +80,8 @@ function AddRestaurant() {
                 className="my-2"
                 type="text"
                 placeholder="Enter Restaurant Type.."
-                name="restaurant_type"
-                value={formData.restaurant_type}
+                name="price"
+                value={price}
                 onChange={onHandleChange}
               />
             </div>
@@ -93,16 +89,16 @@ function AddRestaurant() {
             <div>
               <input
                 className="my-2"
-                type="text"
-                placeholder="Enter Contact Information.."
-                name="contact"
-                value={formData.contact}
+                type="number"
+                placeholder="Enter your Restaurant ID..."
+                name="restaurant_id"
+                value={restaurant_id}
                 onChange={onHandleChange}
               />
             </div>
 
-            <button onClick={onSubmitAddRestaurant} className="my-2 btn-primary">
-              New Restaurant
+            <button onClick={onSubmitAddFoodItem} className="my-2 btn-primary">
+              New Food Item
             </button>
           </form>
         </div>
@@ -111,4 +107,4 @@ function AddRestaurant() {
   );
 }
 
-export default AddRestaurant;
+export default AddFoodItems;
