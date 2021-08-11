@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import FoodContainer from "./FoodContainer";
-import "./Restaurant.css";
+
+import "../styles/Restaurant.css";
 
 
 function RestaurantProfile() {
@@ -23,6 +23,7 @@ function RestaurantProfile() {
 
   return (
     <div className="res-profile">
+       
       {restaurant && (
       <>
       <div className="profile-card">
@@ -32,9 +33,12 @@ function RestaurantProfile() {
           <h3>Restaurant Type: {restaurant.restaurant_type}</h3>
           <h5>{restaurant.location}</h5>
           <h5>Contact: {restaurant.contact}</h5>
-         
+          <div>
+             <Link className="btn btn-primary mx-3" to={`/restaurants/edit/${restaurant.id}`}>Edit Restaurant</Link>
           </div>
-           <Link className="btn btn-primary mx-3" to={`/restaurants/edit/${restaurant.id}`}>Edit Restaurant</Link>
+          </div>
+         
+           
           
     </>
       )}

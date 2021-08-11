@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./FoodContainer.css"
+import "../styles/FoodContainer.css"
 
 function RestaurantContainer() {
   //setting initial state to empty array//
@@ -34,15 +34,15 @@ function RestaurantContainer() {
           <div  className="Input-wrapper">
         <input
           type="text"
-          placeholder="Search by food "
+          placeholder="Search by food.. "
           className="Input-wrapper"
           onChange={(e) => {
             setSearchTerm(e.target.value);
           }}
         />
         </div>
-      <div>
-        <div className="header">
+      <div className="header">
+        <div >
     
         
          {menus.filter(value =>{
@@ -58,17 +58,17 @@ function RestaurantContainer() {
                 }
                 }).map((menu, idx) => (
               <div key={idx}>
-              <div >
-                <div className="card-body restu">
-                  <div className="card">
+              <div className="card card-body rest">
+                <div className="card-body">
+                  <div>
                   <img src={menu.image} alt="menu-pic card" />
                     <h2>{menu.food_name}</h2>
                     <p>Description:  {menu.description}</p>
                     <p>Price: {menu.price}</p>
                    
-                   <Link className="btn btn-primary" to={`/restaurants/${menu.restaurant_id}`}>Restaurant Details</Link>
-                
                   </div>
+                   <Link className="btn btn-primary" to={`/restaurants/${menu.restaurant_id}`}>Restaurant Details</Link>
+                    <Link className="btn btn-primary mx-3" to={"/Orders"}>Order Now</Link>
                   
                 </div>
               </div>

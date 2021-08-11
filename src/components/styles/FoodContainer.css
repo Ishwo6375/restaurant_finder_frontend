@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(224, 225, 230);
+}
+
+img{
+    max-width: 20rem;
+    padding: 20px;
+}
+
+/* .restaurant-container{
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 5rem;
+    background: rgb(10, 14, 14);
+
+     
+} */
+
+.rest{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 30px;
+    background-color: rgb(187, 190, 192);
+}
+
+
+
+.rest:hover{
+  background-color: rgb(95, 196, 209);
+  font-size: 15px;
+  color: rgb(42, 24, 24);
+  box-shadow: 0 4px 15px 5px rgba(0, 0, 0, 0.5);
+  transition: 0.5s all ease-in-out;
+  
+}
+
+p{
+    font-weight: 700;
+    font-size: 20px;
+}

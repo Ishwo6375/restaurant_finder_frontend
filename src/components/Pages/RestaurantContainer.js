@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./RestaurantContainer.css";
+import "../styles/RestaurantContainer.css";
 
 function RestaurantContainer() {
   //setting initial state to empty array//

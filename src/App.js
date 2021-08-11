@@ -8,6 +8,7 @@ import Home from './components/Pages/Home';
 import RestaurantProfile from './components/Pages/RestaurantProfile';
 import EditRestaurant from './components/RestaurantForm/EditRestaurant';
 import FoodContainer from './components/Pages/FoodContainer';
+import Order from './components/Pages/Order';
 
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
         </Route>
         <Route exact path="/menus">
        <FoodContainer />
+        </Route>
+        <Route exact path="/Orders">
+       <Order />
         </Route>
       </Switch>
       
