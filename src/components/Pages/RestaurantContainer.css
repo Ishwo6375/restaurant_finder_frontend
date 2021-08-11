@@ -28,5 +28,7 @@ img{
     align-items: center;
     /* flex-direction: row; */
     justify-content: center;
+    font-family: 'PT Sans', sans-serif;
+
 }
 
