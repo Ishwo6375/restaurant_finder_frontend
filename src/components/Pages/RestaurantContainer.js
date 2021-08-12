@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/RestaurantContainer.css";
 
+
 function RestaurantContainer() {
   //setting initial state to empty array//
   const [restaurants, setRestaurants] = useState([]);
@@ -32,12 +33,11 @@ function RestaurantContainer() {
 
   return (
     <>
+      <div  className="Input-wrapper header">
       <label className="search">Search</label>
-      <div className="Input-wrapper">
         <input
           type="text"
           placeholder="Hungry?? Search Restaurant... "
-          className="Input-wrapper"
           onChange={(e) => {
             setSearchTerm(e.target.value);
           }}
@@ -64,8 +64,8 @@ function RestaurantContainer() {
             .map((restaurant, idx) => (
               <div key={idx} className="restaurant-container">
                 <div>
-                  <div className="card card-body restu">
-                    <div className="card-body">
+                  <div className="card  restu">
+                    <div className="card-body ">
                       <img src={restaurant.image} alt="restaurant-pic" />
                       <h2>{restaurant.name}</h2>
                       <p>{restaurant.restaurant_type}</p>
@@ -88,7 +88,6 @@ function RestaurantContainer() {
                 </div>
               </div>
             ))}
-          ;
         </div>
       </div>
     </>

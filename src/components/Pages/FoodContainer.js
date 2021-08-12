@@ -30,8 +30,8 @@ function RestaurantContainer() {
 
   return (
     <>
+          <div  className="Input-wrapper header">
           <label className="search">Search</label>
-          <div  className="Input-wrapper">
         <input
           type="text"
           placeholder="Search by food.. "
@@ -41,10 +41,8 @@ function RestaurantContainer() {
           }}
         />
         </div>
-      <div className="header">
-        <div >
-    
-        
+      <div >
+        <div className="header">
          {menus.filter(value =>{
               if (searchTerm === '') {
                 return value;
@@ -58,7 +56,7 @@ function RestaurantContainer() {
                 }
                 }).map((menu, idx) => (
               <div key={idx}>
-              <div className="card card-body rest">
+              <div className="card rest">
                 <div className="card-body">
                   <div>
                   <img src={menu.image} alt="menu-pic card" />

@@ -40,13 +40,17 @@ h4{
 .nav-item{
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    color: rgb(115, 129, 209);
+    color: rgb(25, 26, 29);
     margin-top: 15px;
+    font-size: 30px;
+    transition: 0.5s all ease-in-out;
   
 }
 
 .nav-item:hover{
-    color: black;
+    color: rgb(87, 133, 175);
+    font-family: sans-serif;
+    
 }
 
 

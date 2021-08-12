@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import  {useHistory } from 'react-router';
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function EditRestaurant() {
@@ -58,10 +58,9 @@ function EditRestaurant() {
         <div>
           <h2 className="add-hire">Edit Restaurant</h2>
 
-          <form onSubmit={onSubmitEditRestaurant}>
+          <form className="mx-2 " onSubmit={onSubmitEditRestaurant}>
             <div>
               <input
-                className="my-2"
                 type="text"
                 placeholder="Enter Name"
                 name="name"

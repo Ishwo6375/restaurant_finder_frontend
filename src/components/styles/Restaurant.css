@@ -1,7 +1,3 @@
-.res-profile-img {
-  height: 400px;
-  width: 100%;
-}
 
 .profile-card:hover {
   background-color: rgb(95, 196, 209);
@@ -14,4 +10,9 @@
 .profile-card {
   padding: 40px;
   font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.btn-links{
+  text-align: center;
 }

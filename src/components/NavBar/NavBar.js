@@ -5,7 +5,6 @@ function NavBar() {
   return (
     <nav>
       <div className="logo">
-        <i className="fas fa-mountain"></i>
         <h4>Restaurant Finder.com</h4>
       </div>
 

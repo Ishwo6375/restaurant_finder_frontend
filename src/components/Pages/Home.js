@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import '../styles/Home.css'
 
 function Home() {
     return (
-        <div className="main-page">
+    <div className="main-page">
+        <div>
             <h1>Welcome to Restaurant Finder.com</h1>
          <div className="homepage-items">
             <p>New At Restaurant Business???</p>
@@ -11,6 +13,7 @@ function Home() {
             <p>Click Add Now to add your Restaurant</p>
             <Link className="btn btn-secondary" to={"/add"}>Add Now!!</Link>
          </div>
+        </div>
         </div>
     )
 }
