@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import  {useHistory } from 'react-router';
 
 function AddFoodItems() {
+  const history = useHistory();
   //setting initial value as empty string to hold form data//
   const [foodItems, setFoodItems] = useState({
     food_name: "",
@@ -32,6 +34,7 @@ function AddFoodItems() {
       .then((newFoodItem) => {
         const newFoodItems = [foodItems, newFoodItem];
         setFoodItems(newFoodItems);
+         history.push('/menus')
       });
   }
 
