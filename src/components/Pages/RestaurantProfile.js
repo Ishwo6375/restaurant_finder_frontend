@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import  {useHistory } from 'react-router';
 
 import "../styles/Restaurant.css";
 
 function RestaurantProfile() {
-  const history = useHistory();
   const [restaurant, setRestaurant] = useState([]);
   const { id } = useParams();
 
@@ -15,13 +13,14 @@ function RestaurantProfile() {
       .then((res) => res.json())
       .then((resData) => setRestaurant(resData));
     // eslint-disable-next-line
-     history.push('/')
   }, []);
 
   return (
     <div className="res-profile">
       {restaurant && (
         <>
+         <Link className="btn btn-secondary my-4" to={"/restaurants"}>Go Back</Link>
+         <br />
           <div className="profile-card">
             <h1>Restaurant Details</h1>
             <img

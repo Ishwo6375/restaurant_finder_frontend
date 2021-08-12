@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import  {useHistory } from 'react-router';
+import { Link } from "react-router-dom";
 
 function EditRestaurant() {
   const { id } = useParams();
@@ -112,7 +113,8 @@ function EditRestaurant() {
               />
             </div>
 
-            <button className="my-2 btn-primary">Update</button>
+            <button className="btn btn-primary mx-3">Update</button>
+            <Link className="btn btn-secondary my-4" to={`/restaurants/${id}`}>Go Back</Link>
           </form>
         </div>
       </div>

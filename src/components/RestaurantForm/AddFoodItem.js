@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import  {useHistory } from 'react-router';
 
+
 function AddFoodItems() {
   const history = useHistory();
+
   //setting initial value as empty string to hold form data//
   const [foodItems, setFoodItems] = useState({
     food_name: "",
@@ -100,9 +102,10 @@ function AddFoodItems() {
               />
             </div>
 
-            <button onClick={onSubmitAddFoodItem} className="my-2 btn-primary">
-              New Food Item
+            <button className="btn btn-secondary" onClick={onSubmitAddFoodItem}>
+              Add Food Item
             </button>
+    
           </form>
         </div>
       </div>
