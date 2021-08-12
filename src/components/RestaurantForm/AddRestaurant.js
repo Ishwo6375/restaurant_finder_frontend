@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-
+import  {useHistory } from 'react-router';
 function AddRestaurant() {
+  const history = useHistory();
   //setting initial value as empty string to hold form data//
   const [formData, setformData] = useState({
     name: "",
@@ -36,6 +37,7 @@ function AddRestaurant() {
       .then((newRestaurant) => {
         const newRestaurants = [formData, newRestaurant];
         setformData(newRestaurants);
+        history.push('/restaurants')
       });
   }
 

@@ -1,21 +1,22 @@
-
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import  {useHistory } from 'react-router';
 
-function EditRestaurant(){
+function EditRestaurant() {
   const { id } = useParams();
+  const history = useHistory();
 
-//seeting useState to hold data from form//
+  //seeting useState to hold data from form//
   //setting initial value to empty string//
   const [editRestaurant, setEditRestaurant] = useState({
     name: "",
     imaget: "",
     restaurant_type: "",
     location: "",
-    contact: ""
+    contact: "",
   });
- //Array desturctiong//
-  const {name, image, restaurant_type, location , contact} = editRestaurant;
+  //Array desturctiong//
+  const { name, image, restaurant_type, location, contact } = editRestaurant;
 
   function onHandleChange(e) {
     setEditRestaurant({ ...editRestaurant, [e.target.name]: e.target.value });
@@ -27,7 +28,7 @@ function EditRestaurant(){
   }, []);
 
   function showRestaurantonForm() {
-   fetch(`http://127.0.0.1:9393/restaurants/${id}`)
+    fetch(`http://127.0.0.1:9393/restaurants/${id}`)
       .then((res) => res.json())
       .then((resData) => setEditRestaurant(resData));
   }
@@ -46,6 +47,7 @@ function EditRestaurant(){
       .then((res) => res.json())
       .then((newRestaurant) => {
         setEditRestaurant(newRestaurant);
+        history.push('/restaurants')
       });
   }
 
@@ -122,8 +124,6 @@ function EditRestaurant(){
       </Link> */}
     </>
   );
-
 }
 
 export default EditRestaurant;
-

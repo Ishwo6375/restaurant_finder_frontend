@@ -1,11 +1,5 @@
 .main-page{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    background: url("./restaurant.jpg");
+    height: 100vh;
 }
 
-.homepage-items{
- padding: 15rem;
-margin: 30px;
-}

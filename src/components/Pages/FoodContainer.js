@@ -19,14 +19,14 @@ function RestaurantContainer() {
       .then((Data) => setMenus(Data));
   }
 
-//   // Implementing Delete//
-//   function deleteRestaurant(menu) {
-//     fetch(`http://127.0.0.1:9393/restaurants/${menu.id}`, {
-//       method: "DELETE",
-//     })
-//         const newMenu = menus.filter((food) => food.id !== menu.id);
-//         setMenu(newMenus);
-//   }
+  // Implementing Delete//
+  // function deleteFood(menu) {
+  //   fetch(`http://127.0.0.1:9393/menus/${menu.id}`, {
+  //     method: "DELETE",
+  //   })
+  //       const newMenu = menus.filter((food) => food.id !== menu.id);
+  //       setMenus(newMenu);
+  // }
 
   return (
     <>
@@ -69,7 +69,7 @@ function RestaurantContainer() {
                   </div>
                    <Link className="btn btn-primary" to={`/restaurants/${menu.restaurant_id}`}>Restaurant Details</Link>
                     <Link className="btn btn-primary mx-3" to={"/Orders"}>Order Now</Link>
-                  
+                
                 </div>
               </div>
               </div>
