@@ -79,7 +79,7 @@ function AddFoodItems() {
               <input
                 className="my-2"
                 type="text"
-                placeholder="Enter Restaurant Type.."
+                placeholder="Enter Price"
                 name="price"
                 value={price}
                 onChange={onHandleChange}
