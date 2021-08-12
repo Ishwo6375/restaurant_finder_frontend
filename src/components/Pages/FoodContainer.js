@@ -30,12 +30,12 @@ function RestaurantContainer() {
 
   return (
     <>
-          <label>Search</label>
+          <label className="search">Search</label>
           <div  className="Input-wrapper">
         <input
           type="text"
           placeholder="Search by food.. "
-          className="Input-wrapper"
+          className="input"
           onChange={(e) => {
             setSearchTerm(e.target.value);
           }}

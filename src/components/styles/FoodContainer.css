@@ -47,3 +47,14 @@ p{
     font-weight: 700;
     font-size: 20px;
 }
+
+.search{
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.input{
+    padding: 20px;
+}
