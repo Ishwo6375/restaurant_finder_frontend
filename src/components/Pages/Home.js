@@ -4,13 +4,13 @@ import '../styles/Home.css'
 
 function Home() {
     return (
-    <div className="main-page">
+    <div className="homepage-container">
         <div>
-            <h1>Welcome to Restaurant Finder.com</h1>
          <div className="homepage-items">
-            <p>New At Restaurant Business???</p>
-            <p>Add your Restaurant to Our App</p>
-            <p>Click Add Now to add your Restaurant</p>
+            <h1 className="home-head">Welcome to Restaurant Finder.com</h1>
+            <p className="home-p">New At Restaurant Business???</p>
+            <p className="home-p">Add your Restaurant to Our App</p>
+            <p className="home-p">Click Add Now to add your Restaurant</p>
             <Link className="btn btn-secondary" to={"/add"}>Add Now!!</Link>
          </div>
         </div>
