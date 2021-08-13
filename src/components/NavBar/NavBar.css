@@ -23,9 +23,6 @@ nav{
     font-size: 25px;
 }
 
-h4{
-    text-align: center;
-}
 .logo{
     color: rgba(228, 83, 83, 0.85);
     font-size: 32px;
@@ -40,7 +37,7 @@ h4{
 .nav-item{
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    color: rgb(25, 26, 29);
+    color: rgb(234, 237, 245);
     margin-top: 15px;
     font-size: 30px;
     transition: 0.5s all ease-in-out;
@@ -48,9 +45,20 @@ h4{
 }
 
 .nav-item:hover{
-    color: rgb(87, 133, 175);
+    color: rgb(226, 195, 94);
     font-family: sans-serif;
     
 }
+
+.nav-head{
+    padding: 20px;
+    color: rgb(73, 62, 62);
+    font-family: cursive;
+}
+
+body{
+    background: linear-gradient(rgba(41, 128, 185,1.0),rgba(236, 240, 241,1.0));
+}
+
 
 
