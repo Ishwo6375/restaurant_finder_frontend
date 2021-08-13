@@ -5,6 +5,7 @@ import "../styles/RestaurantContainer.css";
 
 
 function RestaurantContainer() {
+    const baseURL = 'http://127.0.0.1:9393';
   //setting initial state to empty array//
   const [restaurants, setRestaurants] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -16,14 +17,14 @@ function RestaurantContainer() {
   }, []);
 
   function showRestaurants() {
-    fetch("http://127.0.0.1:9393/restaurants")
+    fetch(`${baseURL}/restaurants`)
       .then((res) => res.json())
       .then((Data) => setRestaurants(Data));
   }
 
   // Implementing Delete//
   function deleteRestaurant(restaurant) {
-    fetch(`http://127.0.0.1:9393/restaurants/${restaurant.id}`, {
+    fetch(`${baseURL}/restaurants/${restaurant.id}`, {
       method: "DELETE",
     });
     const newRestaurants = restaurants.filter(

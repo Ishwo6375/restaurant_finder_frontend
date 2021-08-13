@@ -5,6 +5,7 @@ import "../styles/Restaurant.css";
 
 
 function RestaurantProfile() {
+  const baseURL = 'http://127.0.0.1:9393';
 
  //setting useState to hold data from Get request//
   const [restaurant, setRestaurant] = useState([]);
@@ -12,7 +13,7 @@ function RestaurantProfile() {
   
  //Get Request by id//
   useEffect(() => {
-    fetch(`http://127.0.0.1:9393/restaurants/${id}`)
+    fetch(`${baseURL}/restaurants/${id}`)
       .then((res) => res.json())
       .then((resData) => setRestaurant(resData));
       // eslint-disable-next-line

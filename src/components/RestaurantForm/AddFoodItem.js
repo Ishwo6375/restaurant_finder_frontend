@@ -5,6 +5,7 @@ import '../styles/EditRestaurant.css'
 
 
 function AddFoodItems() {
+  const baseURL = 'http://127.0.0.1:9393';
   const history = useHistory();
 
   //setting initial value as empty string to hold form data//
@@ -33,7 +34,7 @@ function AddFoodItems() {
       body: JSON.stringify(foodItems ),
     };
 
-    fetch("http://127.0.0.1:9393/foods", config)
+    fetch(`${baseURL}/foods`, config)
       .then((res) => res.json())
       .then((newFoodItem) => {
         const newFoodItems = [foodItems, newFoodItem];

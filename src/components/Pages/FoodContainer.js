@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/FoodContainer.css"
 
 function RestaurantContainer() {
+  const baseURL = 'http://127.0.0.1:9393';
   //setting initial state to empty array//
   const [foods, setFoods] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -14,14 +15,14 @@ function RestaurantContainer() {
   }, []);
 
   function showFoods(){
-     fetch('http://127.0.0.1:9393/foods')
+     fetch(`${baseURL}/foods`)
       .then((res) => res.json())
       .then((Data) => setFoods(Data));
   }
 
   //Implementing Delete//
   function deleteFood(food) {
-    fetch(`http://127.0.0.1:9393/foods/${food.id}`, {
+    fetch(`${baseURL}/foods/${food.id}`, {
       method: "DELETE",
     })
         const newFood = foods.filter((foodItem) => foodItem.id !== food.id);

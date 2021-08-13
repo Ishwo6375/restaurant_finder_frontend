@@ -4,8 +4,8 @@ import '../styles/EditRestaurant.css'
 
 
 function AddRestaurant() {
+   const baseURL = 'http://127.0.0.1:9393';
   const history = useHistory();
- 
   //setting initial value as empty string to hold form data//
   const [formData, setformData] = useState({
     name: "",
@@ -36,7 +36,7 @@ function AddRestaurant() {
       }),
     };
 
-    fetch("http://127.0.0.1:9393/restaurants", config)
+    fetch(`${baseURL}/restaurants`, config)
       .then((res) => res.json())
       .then((newRestaurant) => {
         const newRestaurants = [formData, newRestaurant];

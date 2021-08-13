@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import '../styles/EditRestaurant.css'
 
 function EditRestaurant() {
+  const baseURL = 'http://127.0.0.1:9393';
   const { id } = useParams();
   const history = useHistory();
 
@@ -30,7 +31,7 @@ function EditRestaurant() {
   }, []);
 
   function showRestaurantonForm() {
-    fetch(`http://127.0.0.1:9393/restaurants/${id}`)
+    fetch(`${baseURL}/restaurants/${id}`)
       .then((res) => res.json())
       .then((resData) => setEditRestaurant(resData));
   }
@@ -38,7 +39,7 @@ function EditRestaurant() {
   //Patch method
   function onSubmitEditRestaurant(e) {
     e.preventDefault();
-    fetch(`http://127.0.0.1:9393/restaurants/${id}`, {
+    fetch(`${baseURL}/restaurants/${id}`, {
       method: "PATCH",
       headers: {
         Accept: "application/json",
@@ -55,9 +56,9 @@ function EditRestaurant() {
 
   return (
     <>
-      <div>
-        <div className="container1">
-          <h2>Edit Restaurant</h2>
+      <div className="container1">
+        <div>
+          <h2 className="heading-style">Edit Restaurant</h2>
 
           <form onSubmit={onSubmitEditRestaurant}>
             <div className="login">
