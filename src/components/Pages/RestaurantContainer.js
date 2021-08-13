@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/RestaurantContainer.css";
 
 
+
 function RestaurantContainer() {
   //setting initial state to empty array//
   const [restaurants, setRestaurants] = useState([]);
