@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import  {useHistory } from 'react-router';
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import '../styles/EditRestaurant.css'
 
 function EditRestaurant() {
   const { id } = useParams();
@@ -55,12 +56,13 @@ function EditRestaurant() {
   return (
     <>
       <div>
-        <div className="w-75 mx-auto shadow p-5">
-          <h2 className="add-hire">Edit Restaurant</h2>
+        <div className="container1">
+          <h2>Edit Restaurant</h2>
 
-          <form className="mx-2 " onSubmit={onSubmitEditRestaurant}>
-            <div>
+          <form onSubmit={onSubmitEditRestaurant}>
+            <div className="login">
               <input
+              className="input"
                 type="text"
                 placeholder="Enter Name"
                 name="name"
@@ -69,9 +71,9 @@ function EditRestaurant() {
               />
             </div>
 
-            <div>
+            <div  className="login">
               <input
-                className="my-2"
+               className="input"
                 type="text"
                 placeholder="Enter UserName"
                 name="image"
@@ -80,9 +82,9 @@ function EditRestaurant() {
               />
             </div>
 
-            <div>
+            <div  className="login">
               <input
-                className="my-2"
+               className="input"
                 type="text"
                 placeholder="Enter E-mail Address"
                 name="restaurant_type"
@@ -91,9 +93,9 @@ function EditRestaurant() {
               />
             </div>
 
-            <div>
+            <div className="login">
               <input
-                className="my-2"
+                className="input"
                 type="text"
                 placeholder="Enter Phone Number"
                 name="location"
@@ -101,9 +103,9 @@ function EditRestaurant() {
                 onChange={onHandleChange}
               />
             </div>
-            <div>
+            <div className="login">
               <input
-                className="my-2"
+                className="input"
                 type="text"
                 placeholder="Enter Image URL"
                 name="contact"
@@ -111,9 +113,11 @@ function EditRestaurant() {
                 onChange={onHandleChange}
               />
             </div>
+            <br />
 
-            <button className="btn btn-primary mx-3">Update</button>
-            <Link className="btn btn-secondary my-4" to={`/restaurants/${id}`}>Go Back</Link>
+            <button className="btn-1">Update</button>
+
+            <Link className="btn btn-secondary" to={`/restaurants/${id}`}>Go Back</Link>
           </form>
         </div>
       </div>

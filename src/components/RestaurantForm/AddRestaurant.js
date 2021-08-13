@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import  {useHistory } from 'react-router';
+import '../styles/EditRestaurant.css'
+
 
 function AddRestaurant() {
   const history = useHistory();
@@ -45,14 +47,14 @@ function AddRestaurant() {
 
   return (
     <div>
-      <div className="div-container">
-        <div className="w-75 mx-auto shadow p-5">
+      <div className="container1">
+        <div>
           <h2 className="add">Add New Restaurant</h2>
 
           <form>
-            <div>
+            <div className="login">
               <input
-                className="my-2"
+                 className="input"
                 type="text"
                 placeholder="Enter Restaurant Name.."
                 name="name"
@@ -61,9 +63,9 @@ function AddRestaurant() {
               />
             </div>
 
-            <div>
+            <div className="login">
               <input
-                className="my-2"
+                 className="input"
                 type="text"
                 placeholder="Enter Image URL.."
                 name="image"
@@ -72,9 +74,9 @@ function AddRestaurant() {
               />
             </div>
 
-            <div>
+            <div className="login">
               <input
-                className="my-2"
+                 className="input"
                 type="location"
                 placeholder="Enter location.."
                 name="location"
@@ -83,9 +85,9 @@ function AddRestaurant() {
               />
             </div>
 
-            <div>
+            <div className="login">
               <input
-                className="my-2"
+                 className="input"
                 type="text"
                 placeholder="Enter Restaurant Type.."
                 name="restaurant_type"
@@ -94,9 +96,9 @@ function AddRestaurant() {
               />
             </div>
 
-            <div>
+            <div className="login">
               <input
-                className="my-2"
+                className="input"
                 type="text"
                 placeholder="Enter Contact Information.."
                 name="contact"
@@ -105,8 +107,8 @@ function AddRestaurant() {
               />
             </div>
 
-            <button onClick={onSubmitAddRestaurant} className="btn btn-secondary">
-              New Restaurant
+            <button onClick={onSubmitAddRestaurant} className="btn-1">
+              ADD Restaurant
             </button>
              
           </form>

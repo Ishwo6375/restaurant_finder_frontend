@@ -1,0 +1,51 @@
+.login .input {
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+}
+
+.login .input:last-child {
+  margin-right: 0;
+}
+
+.input {
+  width: 100%;
+  font-size: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  margin: 10px;
+  border: 2px solid #e9eaea;
+  border-radius: 5px;
+  outline: none;
+  transform: all 0.5s ease;
+}
+.container1 {
+  max-width: 800px;
+  height: 600px;
+  background: #fff;
+  margin: 50px auto;
+  box-shadow: 0 0 20px rgba(72, 98, 85, 0.6);
+  box-sizing: border-box;
+  padding: 40px;
+}
+
+.btn-1 {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  color: white;
+  border-radius: 6px;
+  background-color: rgb(122, 122, 207);
+  font-weight: 600;
+  border: 2px solid transparent;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  margin: 15px;
+}
+.btn-1:hover{
+   background-color:rgb(54, 50, 51) ;
+}
+
+
