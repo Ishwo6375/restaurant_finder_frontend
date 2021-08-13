@@ -48,8 +48,8 @@ function RestaurantContainer() {
                 return value;
               }else if(
                 value.food_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                value.description.toLowerCase().includes(searchTerm.toLowerCase())||
-                value.price.toLowerCase().includes(searchTerm.toLowerCase())
+                value.description.toLowerCase().includes(searchTerm.toLowerCase())
+            
               )
               {
                 return value

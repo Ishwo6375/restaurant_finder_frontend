@@ -27,7 +27,7 @@ function RestaurantProfile() {
       <Link className="btn btn-secondary" to={"/restaurants"}>Back</Link>
       <br />
           <h1>Restaurant Details</h1>
-          <img className="img-fluid" src={restaurant.image} alt="restaurant-pic"/>
+          <img className="res-pic" src={restaurant.image} alt="restaurant-pic"/>
           <h2>Restaurant Name: {restaurant.name}</h2>
           <h3>Restaurant Type: {restaurant.restaurant_type}</h3>
           <h5>{restaurant.location}</h5>
