@@ -1,3 +1,7 @@
+body{
+    background: rgb(178, 207, 178);
+}
+
 .login .input {
   width: 48%;
   float: left;

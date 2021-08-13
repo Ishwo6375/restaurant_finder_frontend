@@ -1,29 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-
 import "../styles/Restaurant.css";
 
 
 function RestaurantProfile() {
+
+ //setting useState to hold data from Get request//
   const [restaurant, setRestaurant] = useState([]);
-  // const [foodItems, setFoodItems] = useState([]);
   const { id } = useParams();
   
-
+ //Get Request by id//
   useEffect(() => {
     fetch(`http://127.0.0.1:9393/restaurants/${id}`)
       .then((res) => res.json())
       .then((resData) => setRestaurant(resData));
       // eslint-disable-next-line
   }, []);
-
-  //  useEffect(() => {
-  //   fetch(`http://127.0.0.1:9393/menus/${id}`)
-  //     .then((res) => res.json())
-  //     .then((foodData) => setFoodItems(foodData));
-  //     // eslint-disable-next-line
-  // }, []);
 
   return (
     <div className="res-profile">
@@ -42,7 +35,7 @@ function RestaurantProfile() {
           </div>
           <div className="btn-links">
               <Link className="btn btn-primary mx-3" to={`/restaurants/edit/${restaurant.id}`}>Edit Restaurant</Link>
-             <Link className="btn btn-secondary" to={"/addfooditem"}>Add Food Items!!</Link>
+              <Link className="btn btn-secondary" to={"/addfooditem"}>Add Food Items!!</Link>
           </div>
     </>
       )}

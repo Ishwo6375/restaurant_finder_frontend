@@ -17,7 +17,7 @@ function NavBar() {
           All Restaurants
         </NavLink>
 
-        <NavLink className="nav-item" to="/menus">
+        <NavLink className="nav-item" to="/foods">
           Search By Foods
         </NavLink>
       </div>

@@ -33,12 +33,12 @@ function AddFoodItems() {
       body: JSON.stringify(foodItems ),
     };
 
-    fetch("http://127.0.0.1:9393/menus", config)
+    fetch("http://127.0.0.1:9393/foods", config)
       .then((res) => res.json())
       .then((newFoodItem) => {
         const newFoodItems = [foodItems, newFoodItem];
         setFoodItems(newFoodItems);
-         history.push('/menus')
+         history.push('/foods')
       });
   }
 

@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 
-body{
-    background: rgb(148, 174, 246);
-}
 
 img{
     max-width: 20rem;
@@ -61,3 +58,4 @@ img{
     margin-top: 20px;
     font-family: 'Roboto', sans-serif;
 }
+

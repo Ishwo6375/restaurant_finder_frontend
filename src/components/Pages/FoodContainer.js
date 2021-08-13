@@ -4,28 +4,28 @@ import "../styles/FoodContainer.css"
 
 function RestaurantContainer() {
   //setting initial state to empty array//
-  const [menus, setMenus] = useState([]);
+  const [foods, setFoods] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   //Implementing  GET method
 
   useEffect(() => {
-    showMenus();
+    showFoods();
   }, []);
 
-  function showMenus(){
-     fetch('http://127.0.0.1:9393/menus')
+  function showFoods(){
+     fetch('http://127.0.0.1:9393/foods')
       .then((res) => res.json())
-      .then((Data) => setMenus(Data));
+      .then((Data) => setFoods(Data));
   }
 
   //Implementing Delete//
-  function deleteFood(menu) {
-    fetch(`http://127.0.0.1:9393/menus/${menu.id}`, {
+  function deleteFood(food) {
+    fetch(`http://127.0.0.1:9393/foods/${food.id}`, {
       method: "DELETE",
     })
-        const newMenu = menus.filter((food) => food.id !== menu.id);
-        setMenus(newMenu);
+        const newFood = foods.filter((foodItem) => foodItem.id !== food.id);
+        setFoods(newFood);
   }
 
   return (
@@ -43,7 +43,7 @@ function RestaurantContainer() {
         </div>
       <div >
         <div className="header">
-         {menus.filter(value =>{
+         {foods.filter(value =>{
               if (searchTerm === '') {
                 return value;
               }else if(
@@ -54,21 +54,21 @@ function RestaurantContainer() {
               {
                 return value
                 }
-                }).map((menu, idx) => (
+                }).map((foodItem, idx) => (
               <div key={idx}>
               <div className="card rest">
                 <div className="card-body">
                   <div>
-                  <img src={menu.image} alt="menu-pic card" />
-                    <h2>{menu.food_name}</h2>
-                    <p>Description:  {menu.description}</p>
-                    <p>Price: {menu.price}</p>
+                  <img src={foodItem.image} alt="menu-pic card" />
+                    <h2>{foodItem.food_name}</h2>
+                    <p>Description:  {foodItem.description}</p>
+                    <p>Price: {foodItem.price}</p>
                    
                   </div>
-                   <Link className="btn btn-primary" to={`/restaurants/${menu.restaurant_id}`}>Restaurant Details</Link>
+                   <Link className="btn btn-primary" to={`/restaurants/${foodItem.restaurant_id}`}>Restaurant Details</Link>
                     <Link className="btn btn-primary mx-3" to={"/Orders"}>Order Now</Link>
                      <button
-                        onClick={() => deleteFood(menu)}className="btn btn-danger mx-2">
+                        onClick={() => deleteFood(foodItem)}className="btn btn-danger mx-2">
                         Delete</button>
                 </div>
               </div>

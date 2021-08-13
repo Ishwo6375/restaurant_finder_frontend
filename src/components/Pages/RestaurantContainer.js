@@ -11,7 +11,7 @@ function RestaurantContainer() {
   //Implementing  GET method
 
   useEffect(() => {
-    showRestaurants();
+    showRestaurants(); //This function is called every time delete method is requested//
   }, []);
 
   function showRestaurants() {
@@ -61,7 +61,7 @@ function RestaurantContainer() {
                 return value;
               }
             })
-            .map((restaurant, idx) => (
+            .map((restaurant, idx) => ( 
               <div key={idx} className="restaurant-container">
                 <div>
                   <div className="card  restu">
@@ -79,10 +79,7 @@ function RestaurantContainer() {
                       </Link>
                       <button
                         onClick={() => deleteRestaurant(restaurant)}
-                        className="btn btn-danger mx-2"
-                      >
-                        Delete
-                      </button>
+                        className="btn btn-danger mx-2"> Delete</button>
                     </div>
                   </div>
                 </div>
