@@ -15,16 +15,34 @@
 }
 
 .homepage-container{
-    background: linear-gradient(rgba(28, 188, 156, 0.5), rgba(142, 68, 173, 0.5)),url(bg.jpg);
+    background: linear-gradient(rgba(28, 188, 156, 0.7), rgba(142, 68, 173, 0.7)),url(bg.jpg);
    background-size: cover;
    background-position: fixed;
 }
 
 .home-head{
     font-size: 50px;
-    padding-top: 200px;
+    padding-top: 100px;
+    font-family: 'Roboto';
+    text-align: center;
 }
 
 .home-p{
     font-size: 40px;
+    margin: 50px;
+    color: rgb(44, 46, 53);
+    font-family: 'Rubik', sans-serif;
 }
+
+.home-link{
+    padding: 10px;
+    font-size: 30px;
+    background: rgb(97, 163, 230);
+    border-radius: 15px;
+    
+}
+
+.home-hp{
+    font-size: 30px;
+}
+
