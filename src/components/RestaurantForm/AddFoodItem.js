@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import  {useHistory } from 'react-router';
+import '../styles/EditRestaurant.css'
+
 
 
 function AddFoodItems() {
@@ -42,14 +44,14 @@ function AddFoodItems() {
 
   return (
     <div>
-      <div className="div-container">
-        <div className="w-75 mx-auto shadow p-5">
+      <div className="container1">
+        <div>
           <h2 className="add">Add New Food Item</h2>
 
           <form>
-            <div>
+            <div className="login">
               <input
-                className="my-2"
+                  className="input"
                 type="text"
                 placeholder="Enter Food Name"
                 name="food_name"
@@ -58,9 +60,9 @@ function AddFoodItems() {
               />
             </div>
 
-            <div>
+            <div className="login">
               <input
-                className="my-2"
+                 className="input"
                 type="text"
                 placeholder="Enter Image URL.."
                 name="image"
@@ -69,9 +71,9 @@ function AddFoodItems() {
               />
             </div>
 
-            <div>
+            <div className="login">
               <input
-                className="my-2"
+                 className="input"
                 type="text"
                 placeholder="Enter Description"
                 name="description"
@@ -80,9 +82,9 @@ function AddFoodItems() {
               />
             </div>
 
-            <div>
+            <div className="login">
               <input
-                className="my-2"
+                  className="input"
                 type="text"
                 placeholder="Enter Price"
                 name="price"
@@ -91,9 +93,9 @@ function AddFoodItems() {
               />
             </div>
 
-            <div>
+            <div className="login">
               <input
-                className="my-2"
+                className="input"
                 type="number"
                 placeholder="Enter your Restaurant ID..."
                 name="restaurant_id"
@@ -102,7 +104,7 @@ function AddFoodItems() {
               />
             </div>
 
-            <button className="btn btn-secondary" onClick={onSubmitAddFoodItem}>
+            <button className="btn-1" onClick={onSubmitAddFoodItem}>
               Add Food Item
             </button>
     
