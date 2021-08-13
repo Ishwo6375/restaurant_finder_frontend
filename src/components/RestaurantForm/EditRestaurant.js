@@ -55,7 +55,7 @@ function EditRestaurant() {
   return (
     <>
       <div>
-        <div>
+        <div className="w-75 mx-auto shadow p-5">
           <h2 className="add-hire">Edit Restaurant</h2>
 
           <form className="mx-2 " onSubmit={onSubmitEditRestaurant}>

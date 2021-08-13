@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 
@@ -17,7 +18,8 @@
 .homepage-container{
     background: linear-gradient(rgba(28, 188, 156, 0.7), rgba(142, 68, 173, 0.7)),url(bg.jpg);
    background-size: cover;
-   background-position: fixed;
+   background-position: center;
+ 
 }
 
 .home-head{
@@ -25,6 +27,8 @@
     padding-top: 100px;
     font-family: 'Roboto';
     text-align: center;
+    font-weight: 800;
+   
 }
 
 .home-p{
@@ -32,6 +36,7 @@
     margin: 50px;
     color: rgb(44, 46, 53);
     font-family: 'Rubik', sans-serif;
+   
 }
 
 .home-link{
@@ -39,7 +44,7 @@
     font-size: 30px;
     background: rgb(97, 163, 230);
     border-radius: 15px;
-    
+ 
 }
 
 .home-hp{
