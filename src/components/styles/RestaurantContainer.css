@@ -30,6 +30,7 @@ img{
 
 .restu{
    border-radius: 40px; 
+   background-color: rgb(73, 65, 53) ;
 }
 .restu:hover{
   background-color: rgb(95, 196, 209);

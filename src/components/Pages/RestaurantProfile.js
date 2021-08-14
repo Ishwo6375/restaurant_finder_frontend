@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 import "../styles/Restaurant.css";
 
 
 function RestaurantProfile() {
   const baseURL = 'http://127.0.0.1:9393';
-
+     
  //setting useState to hold data from Get request//
   const [restaurant, setRestaurant] = useState([]);
   const { id } = useParams();

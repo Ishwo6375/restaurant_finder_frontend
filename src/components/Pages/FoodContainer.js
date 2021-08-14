@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { BsTrash } from "react-icons/bs";
 import "../styles/FoodContainer.css"
 
 function RestaurantContainer() {
@@ -33,7 +34,7 @@ function RestaurantContainer() {
     <>
           <div  className="Input-wrapper header">
           <label className="search">Search</label>
-        <input
+        <input 
           type="text"
           placeholder="Search by food.. "
           className="input"
@@ -66,11 +67,11 @@ function RestaurantContainer() {
                     <p>Price: {foodItem.price}</p>
                    
                   </div>
-                   <Link className="btn btn-primary" to={`/restaurants/${foodItem.restaurant_id}`}>Restaurant Details</Link>
-                    <Link className="btn btn-primary mx-3" to={"/Orders"}>Order Now</Link>
+                   <Link className="btn btn-secondary" to={`/restaurants/${foodItem.restaurant_id}`}>Restaurant</Link>
+                    <Link className="btn btn-primary mx-3" to={"/Orders"}>Order Online</Link>
                      <button
                         onClick={() => deleteFood(foodItem)}className="btn btn-danger mx-2">
-                        Delete</button>
+                       <BsTrash /></button>
                 </div>
               </div>
               </div>
