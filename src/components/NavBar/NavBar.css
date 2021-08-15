@@ -12,6 +12,7 @@ nav{
     display: flex;
     justify-content: space-around;
     min-height: 8vh;
+     background: linear-gradient(rgba(28, 188, 156, 0.7), rgba(142, 68, 173, 0.7))
 }
 
 .navlinks{
@@ -32,28 +33,32 @@ nav{
 .nav-item{
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    color: rgb(69, 73, 78);
+    color: rgb(220, 227, 236);
     margin-top: 15px;
     font-size: 30px;
     transition: 0.5s all ease-in-out;
+      font-family: 'lato';
+    font-weight: 800;
   
 }
 
 .nav-item:hover{
-    color: rgb(43, 103, 231);
+    color: rgb(47, 41, 34);
     font-family: sans-serif;
     
 }
 
 .nav-head{
     padding: 30px;
-    color: rgb(73, 62, 62);
+    color: rgb(250, 246, 246);
     font-family: cursive;
     font-size: 30px;
+    font-family: 'lato';
+    font-weight: 800;
 }
 
 body{
-    background:rgb(216, 185, 185);
+    background:rgb(188, 212, 223);
 }
 
 

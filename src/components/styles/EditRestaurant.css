@@ -1,5 +1,5 @@
 body{
-    background: rgb(15, 15, 15);
+    background: rgb(178, 207, 178);
 }
 
 .login .input {
@@ -19,19 +19,21 @@ body{
   box-sizing: border-box;
   margin-bottom: 25px;
   margin: 10px;
-  border: 2px solid #e9eaea;
   border-radius: 5px;
   outline: none;
   transform: all 0.5s ease;
+  
 }
 .container1 {
   max-width: 800px;
   height: 600px;
-  background: #fff;
+  background: linear-gradient(rgba(28, 188, 156, 0.5), rgba(142, 68, 173, 0.5));
   margin: 50px auto;
   box-shadow: 0 0 20px rgba(72, 98, 85, 0.6);
   box-sizing: border-box;
   padding: 40px;
+   background-size: cover;
+   background-position: cent
 }
 
 .btn-1 {
