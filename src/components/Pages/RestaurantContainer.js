@@ -66,7 +66,7 @@ function RestaurantContainer() {
             }).map((restaurant, idx) => ( 
               <div key={idx} className="restaurant-container">
                 <div>
-                  <div className="card  restu">
+                  <div className="card  rest">
                     <div className="card-body">
                       <img src={restaurant.image} alt="restaurant-pic" />
                       <h2>{restaurant.name}</h2>
