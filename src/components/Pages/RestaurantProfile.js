@@ -32,8 +32,8 @@ function RestaurantProfile() {
           <img className="res-pic" src={restaurant.image} alt="restaurant-pic"/>
           <h2>Restaurant Name: {restaurant.name}</h2>
           <h3>Restaurant Type: {restaurant.restaurant_type}</h3>
-          <h5>{restaurant.location}</h5>
-          <h5>Contact: {restaurant.contact}</h5>
+          <h4>Location: {restaurant.location}</h4>
+          <h4>Contact: {restaurant.contact}</h4>
               <Link className="btn btn-primary mx-3" to={`/restaurants/edit/${restaurant.id}`}>Edit Restaurant</Link>
               <Link className="btn btn-secondary" to={"/addfooditem"}>Add Food Items!!</Link>
           </div>
