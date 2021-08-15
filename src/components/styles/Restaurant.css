@@ -1,8 +1,10 @@
 
 .profile-card:hover {
-  background-color: rgb(95, 196, 209);
-  font-size: 15px;
+
+  font-size: 25px;
   color: rgb(255, 255, 255);
+  font-family: 'lato';
+    font-weight: 800;
   box-shadow: 0 4px 15px 5px rgba(0, 0, 0, 0.5);
   transition: 0.5s all ease-in-out;
 }

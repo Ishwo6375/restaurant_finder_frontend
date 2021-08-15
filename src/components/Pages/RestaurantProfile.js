@@ -34,10 +34,10 @@ function RestaurantProfile() {
           <h3>Restaurant Type: {restaurant.restaurant_type}</h3>
           <h5>{restaurant.location}</h5>
           <h5>Contact: {restaurant.contact}</h5>
-          </div>
-          <div className="btn-links">
               <Link className="btn btn-primary mx-3" to={`/restaurants/edit/${restaurant.id}`}>Edit Restaurant</Link>
               <Link className="btn btn-secondary" to={"/addfooditem"}>Add Food Items!!</Link>
+          </div>
+          <div className="btn-links">
           </div>
     </>
       )}

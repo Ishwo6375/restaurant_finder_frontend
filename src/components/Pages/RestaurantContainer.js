@@ -36,7 +36,8 @@ function RestaurantContainer() {
 
   return (
     <>
-      <div  className="Input-wrapper header">
+      <div>
+      <div className="Input-wrapper header">
       <label className="search">Search</label>
         <input
           type="text"
@@ -46,7 +47,6 @@ function RestaurantContainer() {
           }}
         />
       </div>
-      <div>
         <div className="header">
           {restaurants
             .filter((value) => {

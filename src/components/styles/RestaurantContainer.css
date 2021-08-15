@@ -40,7 +40,7 @@ img{
    background-color: rgb(73, 65, 53) ;
 }
 .restu:hover{
-  background-color: rgb(95, 196, 209);
+  background-color: rgb(120, 163, 219);
   font-size: 15px;
   color: rgb(255, 255, 255);
   box-shadow: 0 4px 15px 5px rgba(0, 0, 0, 0.5);
@@ -63,7 +63,8 @@ img{
    .search{
     font-weight: 600;
     font-size: 25px;
-    margin-top: 20px;
-    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    color: rgb(243, 238, 231);
+    
 }
 
