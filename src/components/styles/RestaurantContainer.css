@@ -19,7 +19,7 @@ img {
   margin-right: 20px;
   margin-top: 20px;
   border-radius: 5rem;
-  background: rgb(210, 221, 221);
+  background: rgb(220, 231, 231);
 }
 
 .header {
@@ -33,9 +33,9 @@ img {
   background: linear-gradient(rgba(28, 188, 156, 0.7), rgba(142, 68, 173, 0.7));
 }
 
-.rest {
+.restu {
   border-radius: 40px;
-  background-color: rgb(212, 204, 192);
+  background-color: rgb(233, 226, 215);
 }
 .restu:hover {
   background-color: rgb(120, 163, 219);
