@@ -10,6 +10,7 @@ import EditRestaurant from "./components/RestaurantForm/EditRestaurant";
 import FoodContainer from "./components/Pages/FoodContainer";
 import Order from "./components/Pages/Order";
 import AddFoodItems from "./components/RestaurantForm/AddFoodItem";
+import ContactForm from "./components/RestaurantForm/ContactForm";
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
           </Route>
           <Route exact path="/addfooditem">
             <AddFoodItems />
+          </Route>
+           <Route exact path="/contacts">
+            <ContactForm />
           </Route>
         </Switch>
       </div>

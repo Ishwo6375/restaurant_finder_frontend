@@ -75,7 +75,7 @@ function RestaurantContainer() {
                 </div>
               </div>
               </div>
-            ))};
+            ))}
         </div>
       </div>
     </>

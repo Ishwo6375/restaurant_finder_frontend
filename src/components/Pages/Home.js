@@ -13,6 +13,10 @@ function Home() {
             <p className="home-p">Add your Restaurant to Our App</p>
             <p className="home-p">Click Add Now to add your Restaurant</p>
             <Link className="btn btn-secondary home-link" to={"/add"}>Add Now!!!</Link>
+            <br />
+
+             <p className="home-p">To Know more Click the button below:</p>
+            <Link className="btn btn-secondary home-link" to={"/contacts"}>Contact Us</Link>
          </div>
         </div>
         </div>
