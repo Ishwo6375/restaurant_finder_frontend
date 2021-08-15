@@ -1,53 +1,47 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-
-.homepage-items{
-    line-height: 80px;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
-    width: 100vh;
-    height: 100vw;
-
+.homepage-items {
+  line-height: 80px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  width: 100vh;
+  height: 100vw;
 }
 
-.homepage-container{
-    background: linear-gradient(rgba(28, 188, 156, 0.7), rgba(142, 68, 173, 0.7)),url(bg.jpg);
-   background-size: cover;
-   background-position: center;
- 
+.homepage-container {
+  background: linear-gradient(rgba(28, 188, 156, 0.7), rgba(142, 68, 173, 0.7)),
+    url(bg.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
-.home-head{
-    font-size: 50px;
-    padding-top: 100px;
-    font-family: 'Roboto';
-    text-align: center;
-    font-weight: 800;
-   
+.home-head {
+  font-size: 50px;
+  padding-top: 100px;
+  font-family: "Roboto";
+  text-align: center;
+  font-weight: 800;
 }
 
-.home-p{
-    font-size: 40px;
-    margin: 50px;
-    color: rgb(240, 226, 222);
-    font-family: 'Rubik', sans-serif;
-   
+.home-p {
+  font-size: 40px;
+  margin: 50px;
+  color: rgb(240, 226, 222);
+  font-family: "Rubik", sans-serif;
 }
 
-.home-link{
-    padding: 10px;
-    font-size: 30px;
-    background: rgb(97, 163, 230);
-    border-radius: 15px;
- 
+.home-link {
+  padding: 10px;
+  font-size: 30px;
+  background: rgb(97, 163, 230);
+  border-radius: 15px;
 }
 
-.home-hp{
-    font-size: 30px;
+.home-hp {
+  font-size: 30px;
 }
-
