@@ -25,7 +25,8 @@ function RestaurantProfile() {
       {restaurant && (
       <>
       <div className="profile-card">
-      <Link className="btn btn-secondary" to={"/restaurants"}>Back</Link>
+      <Link className="btn btn-secondary mx-4" to={"/restaurants"}>Back To Restaurants</Link>
+       <Link className="btn btn-secondary" to={"/foods"}>Go To Foods</Link>
       <br />
           <h1>Restaurant Details</h1>
           <img className="res-pic" src={restaurant.image} alt="restaurant-pic"/>

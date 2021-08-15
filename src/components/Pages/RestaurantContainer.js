@@ -63,12 +63,11 @@ function RestaurantContainer() {
               ) {
                 return value;
               }
-            })
-            .map((restaurant, idx) => ( 
+            }).map((restaurant, idx) => ( 
               <div key={idx} className="restaurant-container">
                 <div>
                   <div className="card  restu">
-                    <div className="card-body ">
+                    <div className="card-body">
                       <img src={restaurant.image} alt="restaurant-pic" />
                       <h2>{restaurant.name}</h2>
                       <p>{restaurant.restaurant_type}</p>

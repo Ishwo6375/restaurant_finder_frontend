@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import  {useHistory } from 'react-router';
 import '../styles/EditRestaurant.css'
+import '../styles/Home.css'
 
 
 function AddRestaurant() {

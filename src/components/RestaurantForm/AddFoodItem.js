@@ -44,7 +44,7 @@ function AddFoodItems() {
   }
 
   return (
-    <div>
+    <div className="homepage-container">
       <div className="container1">
         <div>
           <h2 className="add">Add New Food Item</h2>
