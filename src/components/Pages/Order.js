@@ -5,7 +5,7 @@ function Order() {
     return (
         <div className="order-container">
             <h3 className="order-header">Thank you</h3>
-            <img className="order-img" src="./check.jpg" alt="tick" />
+            <img className="order-img" src="./check.png" alt="tick" />
             <h3 className="order-header">Your Order has been received...</h3>
         </div>
     )

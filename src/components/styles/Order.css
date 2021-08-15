@@ -1,18 +1,22 @@
-.order-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-   
+.order-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(rgba(28, 188, 156, 0.7), rgba(142, 68, 173, 0.7)),
+    url(bg1.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 50vw;
 }
 
-.order-header{
-    font-size: 50px;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-   font-weight: 700;
-    
+.order-header {
+  font-size: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  color: rgb(221, 235, 235);
 }
-.order-img{
+.order-img {
   width: 150px;
 }
-
