@@ -50,7 +50,7 @@ function EditRestaurant() {
       .then((res) => res.json())
       .then((newRestaurant) => {
         setEditRestaurant(newRestaurant);
-        history.push('/restaurants')
+        history.push(`/restaurants/${id}`)
       });
   }
 
