@@ -6,6 +6,12 @@ function Home() {
     return (
     <div className="homepage-container">
         <div>
+            <div className="para">
+            <p>Note: Failed to host backend to heroku.Please check locally</p>
+            <p>Below is my git hub profile link to my backend and frontend</p>
+            <p>https://github.com/Ishwo6375/Phase_3_backend</p>
+            <p>https://github.com/Ishwo6375/restaurant_finder_frontend</p>
+            </div>
          <div className="homepage-items">
             <h1 className="home-head">Welcome to Restaurant Finder.com</h1>
              <p className="home-hp">Find your desired Restaurant...</p>
