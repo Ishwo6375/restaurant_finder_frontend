@@ -46,6 +46,7 @@ function RestaurantContainer() {
       <div >
         <div className="header">
          {foods.filter(value =>{
+          // eslint-disable-next-line
               if (searchTerm === '') {
                 return value;
               }else if(

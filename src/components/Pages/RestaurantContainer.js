@@ -54,12 +54,8 @@ function RestaurantContainer() {
                 return value;
               } else if (
                 value.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                value.location
-                  .toLowerCase()
-                  .includes(searchTerm.toLowerCase()) ||
-                value.restaurant_type
-                  .toLowerCase()
-                  .includes(searchTerm.toLowerCase())
+                value.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                value.restaurant_type.toLowerCase().includes(searchTerm.toLowerCase())
               ) {
                 return value;
               }
